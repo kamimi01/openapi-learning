@@ -1,0 +1,29 @@
+openapi: "3.0.0"
+
+info:
+  title: "ショップレビューAPI"
+  version: "1.0.0"
+
+paths:
+  "/shops/{shopId}/reviews":
+    post:
+      summary: "ショップレビュー投稿"
+      description: "ショップレビュー投稿"
+      parameters:
+      - name: shopId
+        in: path
+        required: true
+        schema: {type: string}
+      requestBody:
+        description: "レビューの中身"
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                score: {type: integer, example: 3}
+                comment: {type: string, example: "美味しかった"}
+      responses:
+        "201":
+          description: "成功"

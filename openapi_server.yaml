@@ -1,0 +1,22 @@
+openapi: "3.0.3"
+
+info:
+  title: "サンプルAPI"
+  version: "1.0.0"
+
+servers:
+  - url: "http://localhost/{port}"
+    description: "ローカル環境"
+    variables:
+      port:
+        enum: ["3000", "8000"]
+        default: "3000"
+  - url: "https://it1.tastylog.com"
+    description: "結合テスト環境"
+  - url: "https://stg.tastylog.com"
+    description: "ステージング環境"
+  - url: "https://api.tastylog.com"
+    description: "本番環境"
+
+paths:
+  {}

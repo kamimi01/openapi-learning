@@ -1,0 +1,31 @@
+openapi: "3.0.0"
+
+info:
+  title: "ショップレビューAPI"
+  version: "1.0.0"
+
+paths:
+  "/shops/{shops}/reviews":
+    post:
+      summary: "レビュー作成"
+      description: "レビュー作成"
+      parameters:
+      - name: shopId
+        in: path
+        required: true
+        schema: {type: string}
+        example: "abcdefg"
+      - name: x-api-key
+        in: header
+        description: "リクエストユーザーを特定する"
+        schema: {type: string}
+        example: "xxxx-xxxx-xxxx-xxxx"
+      - name: token
+        in: cookie
+        description: "ワンタイムトークン"
+        schema: {type: string}
+        example: "xxxx-xxxx-xxxx-xxxx"
+      responses:
+        "201":
+          description: "成功"
+          

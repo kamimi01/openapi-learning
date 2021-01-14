@@ -1,0 +1,49 @@
+openapi: "3.0.3"
+
+info:
+  title: ""
+  version: "1.0.0"
+
+paths:
+  {}
+
+components:
+  schemas:
+    SampleObject:
+      type: object
+      properties:
+        name: {type: string}
+        dob: {type: string, format: date}
+      additionalProperties: true
+      required:
+        - name
+      minProperties: 2
+      maxProperties: 2
+    SampleArray:
+      type: array
+      items: {type: string}
+      minItems: 0
+      maxItems: 5
+      uniqueItems: true
+    SampleEnum:
+      type: string
+      enum: ["red", "blue", "yellow"]
+    LastSample:
+      type: object
+      properties:
+        shop: 
+          type: object
+          properties:
+            name: {type: string}
+            place: {type: string}
+        reviews:
+          type: array
+          items:
+            type: object
+            properties:
+              score: 
+                type: integer
+                enum: [1, 2, 3, 4, 5]
+              comment:
+                type: string
+                

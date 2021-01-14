@@ -1,0 +1,30 @@
+openapi: "3.0.3"
+
+info:
+  title: "ショップレビューAPI"
+  version: "1.0.0"
+
+tags:
+- name: reviews
+  description: "ショップレビューに関する操作"
+
+paths:
+  "/shops/{shopId}/reviews":
+    parameters:
+      - name: shopId
+        in: path
+        required: true
+        schema: {type: string}
+    get:
+      summary: "ショップレビュー取得"
+      description: "ショップレビュー取得"
+      tags: ["reviews"]
+      responses:
+        "200":
+          description: "成功"
+    post:
+      summary: "ショップレビュー作成"
+      tags: ["reviews"]
+      responses:
+        "201":
+          description: "成功"

@@ -1,0 +1,17 @@
+# 5つのルートオブジェクトが存在し、「openapi」「info」「paths」が必須
+openapi: "3.0.3"
+
+info:
+  title: "サンプルAPI"
+  version: "1.0.0"
+
+servers: []
+
+tags: []
+
+paths:
+  {}
+
+securities: []
+
+components: {}

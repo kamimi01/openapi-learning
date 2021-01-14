@@ -1,0 +1,20 @@
+openapi: "3.0.3"
+
+info:
+  title: "サンプルAPI"
+  description: |
+    # Features
+    - ユーザー取得
+    - ユーザー作成
+  termsOfService: "https://sample.com.terms/"
+  contact:
+    name: "Customer Support"
+    url: "https://sample.com/support"
+    email: "support@email.com"
+  license:
+    name: "MIT License"
+    url: "https://opensource.org/licenses/MIT"
+  version: "1.0.0"
+
+paths:
+  {}

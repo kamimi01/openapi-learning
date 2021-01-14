@@ -1,0 +1,21 @@
+openapi: "3.0.0"
+
+info:
+  title: "サンプルAPI"
+  version: "1.0.0"
+
+paths:
+  "/shops/{shopId}/reviews":
+    get:
+      summary: "ショップのレビューを取得"
+      description: "ショップのレビューを取得する（詳細詳細）"
+      tags: ["shops"]
+      deprecated: false
+      parameters:
+        - name: shopId
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        "200":
+          description: "成功"
